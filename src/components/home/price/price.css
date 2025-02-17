@@ -1,46 +1,90 @@
 .price {
   text-align: center;
+  background: #000000; /* Keep background white */
+  padding: 60px 0;
 }
+
 .price .content .box {
   width: 31.5%;
   padding: 30px;
   border-radius: 10px;
+  background: #1e3a5f; /* Deep blue background */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ffffff; /* White text */
 }
+
+.price .content .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
 .price button {
   margin-bottom: 20px;
+  background: #ffffff; /* White button */
+  color: #1e3a5f; /* Deep blue text */
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid #1e3a5f;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+.price button:hover {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
 .price .box:nth-child(1) .topbtn button,
 .price .box:nth-child(3) .topbtn button {
   display: none;
 }
-.price h3 {
-  font-size: 22px;
+
+.price h3, 
+.price h1, 
+.price h1 span, 
+.price ul li, 
+.price label {
+  color: #ffffff; /* Ensure all text inside box is white */
 }
+
 .price h1 {
   font-size: 60px;
+  font-weight: 700;
 }
+
 .price h1 span {
   font-size: 30px;
   font-weight: 500;
 }
+
 .price ul {
   margin-top: 40px;
 }
+
 .price ul li {
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
 }
+
 .price label {
   width: 30px;
   height: 30px;
   line-height: 30px;
   border-radius: 50%;
   margin-right: 20px;
+  background: #ffffff; /* White background */
+  color: #1e3a5f; /* Deep blue text */
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .price .btn5 {
   width: 100%;
 }
+
 @media screen and (max-width: 800px) {
   .price .content {
     flex-direction: column;
